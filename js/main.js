@@ -4,7 +4,7 @@ jQuery(function($, undefined) {
         if (command !== '') {
             switch(command){
                 case 'help':
-                    this.echo('Available commands:\nwhoami        Learn About Me\nedu           Education\nskills        Skills\ncontact       Contact Me');
+                    this.echo('Available commands:\nwhoami        Learn About Me\nedu           Education\nskills        Skills\ncontact       Contact Me\nclear         Clear Terminal');
                     break;
                 case 'whoami':
                     this.echo('under construction..( ͡~ ͜ʖ ͡°)');
@@ -12,7 +12,7 @@ jQuery(function($, undefined) {
                 case 'edu': 
                     this.echo('under construction..( ͡~ ͜ʖ ͡°)');
                     break;
-                case 'contact':
+                case 'skills':
                     this.echo('under construction..( ͡~ ͜ʖ ͡°)');
                     break;
                 case 'contact':
