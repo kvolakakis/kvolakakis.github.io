@@ -15,6 +15,7 @@ jQuery(function($, undefined) {
         if (command !== '') {
             switch(command){
                 case 'help':
+                case 'interests':
                 case 'whoami':
                 case 'edu': 
                 case 'skills':
