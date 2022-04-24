@@ -1,37 +1,38 @@
+function getContent(command){
+    var message = "";
+    content[command].forEach(line => {
+        message += line;
+        if((content[command].indexOf(line)) !== (content[command].length - 1)){
+            message += '\n';
+        }
+    })
+    return message;    
+}
+
 jQuery(function($, undefined) {
-    // var json = JSON.parse()
     $('#terminal').terminal(function(command) {
+        var message;
         if (command !== '') {
             switch(command){
                 case 'help':
-                    this.echo('Available commands:\nwhoami        Learn About Me\nedu           Education\nskills        Skills\ncontact       Contact Me\nclear         Clear Terminal');
-                    break;
                 case 'whoami':
-                    this.echo('under construction..( ͡~ ͜ʖ ͡°)');
-                    break;
                 case 'edu': 
-                    this.echo('under construction..( ͡~ ͜ʖ ͡°)');
-                    break;
                 case 'skills':
-                    this.echo('under construction..( ͡~ ͜ʖ ͡°)');
-                    break;
                 case 'contact':
-                    this.echo('under construction..( ͡~ ͜ʖ ͡°)');
-                    break;
                 case 'test':
-                    this.echo('under construction..( ͡~ ͜ʖ ͡°)')
+                    message = getContent(command);
+                    this.echo(message);
                     break;
                 default:
-                    this.echo('[[;red;]invalid input]');
-
+                    this.echo(getContent('invalid'));
             }
         }
         
     }, {
-        greetings: '[[b;purple;]kvolakakis:][[b;yellow;]$] Dear Guest, Welcome!\n[[b;purple;]kvolakakis:][[b;yellow;]$] Type [[b;#ff8c69;]"help"] to view available options. :)\n',
-        name: 'js_demo',
+        greetings: getContent('greetings'),
+        name: getContent('name'),
         height: '100%',
-        width: '100%',
-        prompt: '[[b;purple;]guest:][[b;yellow;]$] '
+        width: '200%',
+        prompt: getContent('prompt')
     });
 });
