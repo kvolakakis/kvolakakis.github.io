@@ -95,6 +95,9 @@ var content = {
     "   German:        &#9733;&#9733;&#9734;&#9734;&#9734;",
     "  ------------------------",
   ],
-  contact: ["~.~.~.~under construction~.~.~.~"],
+  contact: [
+    "Linkedin:      https://www.linkedin.com/in/kvolakakis/",
+    "Github:        https://github.com/kvolakakis",
+  ],
   invalid: ["[[;red;]invalid input]"],
 };
